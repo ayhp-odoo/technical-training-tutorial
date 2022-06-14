@@ -10,7 +10,9 @@
   'category': 'Logistcs',
   'version': '0.1',
   'depends': ['base'],
-  'data': [],
+  'data': [
+    'security/ir.model.access.csv'
+  ],
   'demo': [
     'demo/spaceship_demo.xml'
   ],
