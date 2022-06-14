@@ -23,7 +23,7 @@ class SpaceShip(models.Model):
     selection=[
       ('flipper','Flipper'),
       ('glide_symmetric_spaceship','Glide symmetric spaceship'),
-      ('non_monotonic_spaceship','Non-monotonic spaceship')
+      ('non_monotonic_spaceship','Non-monotonic spaceship'),
       ('knightship','Knightship')
     ]
   )
