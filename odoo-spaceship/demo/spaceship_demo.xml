@@ -8,6 +8,7 @@
       <field name="fuel_type">solid</field>
       <field name="ship_type">'flipper</field>
       <field name="number_passengers">20</field>
+      <field name="active">true</field>
     </record>
     <record model='odoo.course' id='starship_ns15'>
       <field name='name'>Starship NS15</field>
@@ -16,6 +17,7 @@
       <field name="fuel_type">liquid</field>
       <field name="ship_type">'knightship</field>
       <field name="number_passengers">50</field>
+      <field name="active">true</field>
     </record>
   </data>
 </odoo>
