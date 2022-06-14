@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+  <data noupdate='1'>
+    <record model='odoo.course' id='falcon_9'>
+      <field name='name'>Falcon 9</field>
+      <field name='captain'>John Doe</field>
+      <field name='ship_dimensions'>70</field>
+      <field name="fuel_type">solid</field>
+      <field name="ship_type">'flipper</field>
+      <field name="number_passengers">20</field>
+    </record>
+    <record model='odoo.course' id='starship_ns15'>
+      <field name='name'>Starship NS15</field>
+      <field name='captain'>Ivan Ivanov</field>
+      <field name='ship_dimensions'>120</field>
+      <field name="fuel_type">liquid</field>
+      <field name="ship_type">'knightship</field>
+      <field name="number_passengers">50</field>
+    </record>
+  </data>
+</odoo>

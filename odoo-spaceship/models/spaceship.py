@@ -15,7 +15,7 @@ class SpaceShip(models.Model):
     selection=[
       ('solid','Solid'),
       ('liquid','Liquid')
-    ]
+    ],
   )
   ship_type = fields.Selection(
     string='Ship\'s Type',
@@ -25,6 +25,7 @@ class SpaceShip(models.Model):
       ('glide_symmetric_spaceship','Glide symmetric spaceship'),
       ('non_monotonic_spaceship','Non-monotonic spaceship'),
       ('knightship','Knightship')
-    ]
+    ],
   )
   number_passengers = fields.Integer(string='Number of Passengers',required=True)
+  active= fields.Boolean(default=True)
