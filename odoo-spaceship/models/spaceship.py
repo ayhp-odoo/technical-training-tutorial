@@ -28,4 +28,4 @@ class SpaceShip(models.Model):
     ],
   )
   number_passengers = fields.Integer(string='Number of Passengers',required=True)
-  active= fields.Boolean(default=True)
+  active = fields.Boolean(default=True)
