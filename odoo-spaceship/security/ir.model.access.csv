@@ -1,2 +1,3 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-odoo-spaceship.access_odoo_spaceship,access_odoo_spaceship,odoo-spaceship.model_odoo_spaceship,base.group_user,1,1,1,1
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+spaceship_admin,spaceship admin,model_odoo_spaceship,group_spaceship_admin,1,1,1,1
+spaceship_read_all,spaceship read all,model_odoo_spaceship,,1,0,0,0
