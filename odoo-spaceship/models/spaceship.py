@@ -8,7 +8,7 @@ class SpaceShip(models.Model):
 
   name = fields.Char(string='Ship\'s Nanme', required=True)
   captain = fields.Char(string='Captain\'s name',required=True)
-  ship_dimensions = fields.Float(string='Ship\'s Dimensions',required=True)
+  ship_dimensions = fields.Float( string='Ship\'s Dimensions',required=True)
   fuel_type = fields.Selection(
     string='Ship\'s Fuel Type',
     required=True,

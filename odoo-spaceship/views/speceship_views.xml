@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+  <data>
+    <record model='ir.ui.view' id='spaceship_view_form'>
+      <field name='name'>odoo.spaceship.form</field>
+      <field name='model'>odoo.spaceship</field>
+      <field name='arch' type='xml'>
+        <form string='Add Spaceship'>
+          <sheet>
+            <h1><field name='name' /></h1>
+            <group>
+              <group>
+                <field name='captain' />
+              </group>
+              <group>
+                <field name='number_passengers'></field>
+              </group>
+              <group>
+                <field name='active' />
+              </group>
+            </group>
+            <notebook>
+              <page string='Overview'>
+                <group>
+                  <field name='ship_dimensions' />
+                </group>
+                <group>
+                  <field name='fuel_type' />
+                </group>
+                <group>
+                  <field name='ship_type' />
+                </group>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+    <record model='ir.ui.view' id='spaceship_view_list'>
+      <field name='name'>odoo.spaceship.list</field>
+      <field name='model'>odoo.spaceship</field>
+      <field name='arch' type='xml'>
+        <tree string='Spaceships'>
+          <field name='name' />
+          <field name='ship_type' />
+          <field name='number_passengers' />
+        </tree>
+      </field>
+    </record>
+  </data>
+</odoo>
