@@ -13,8 +13,9 @@
   'data': [
     'views/spaceship_menu_items.xml',
     'views/speceship_views.xml',
+    'views/mission_views.xml',
     'security/spaceship_security.xml',
-    'security/ir.model.access.csv'
+    'security/ir.model.access.csv',
   ],
   'demo': [
     'demo/spaceship_demo.xml'

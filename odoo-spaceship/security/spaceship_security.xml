@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<odoo>
+<!-- <odoo>
   <record id='group_spaceship_admin' model='res.groups'>
     <field name='name'>Spaceship / Admin</field>
   </record>
@@ -12,4 +12,18 @@
     <field name='domain_force'>[('active','=','True')]</field>
     <field name="model_id" ref="model_odoo_spaceship" />
   </record>
+</odoo> -->
+<odoo>
+    <record id="spaceship_access" model="res.groups">
+        <field name="name">SpaceShip / Crew</field>
+    </record>
+    <record id="only_crew_modify" model="ir.rule">
+        <field name="name">Only crew members can modify</field>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="0"/>
+        <field name="domain_force">[('active', '=', True)]</field>
+        <field name="model_id" ref="model_odoo_spaceship"/>
+    </record>
 </odoo>

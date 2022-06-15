@@ -1,3 +1,7 @@
 id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
-spaceship_admin,spaceship admin,model_odoo_spaceship,group_spaceship_admin,1,1,1,1
-spaceship_read_all,spaceship read all,model_odoo_spaceship,,1,0,0,0
+spaceship_admin,spaceship admin,odoo-spaceship.model_odoo_spaceship,spaceship_access,1,1,1,1
+spaceship_crew,spaceship crew,odoo-spaceship.model_odoo_spaceship,spaceship_access,1,1,1,0
+general_user,general user,odoo-spaceship.model_odoo_spaceship,,1,0,0,0
+mission_admin,mission admin,odoo-spaceship.model_odoo_mission,spaceship_access,1,1,1,1
+mission_crew,mission crew,odoo-spaceship.model_odoo_mission,spaceship_access,1,1,1,0
+general_user,mission read all,odoo-spaceship.model_odoo_mission,,1,0,0,0

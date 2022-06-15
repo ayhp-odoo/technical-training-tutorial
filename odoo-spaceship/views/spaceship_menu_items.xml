@@ -10,8 +10,18 @@
       </field>
     </record>
 
-    <menuitem name='Odoo Spaceship' id='root_menu_spaceship' sequence='1' />
-    <menuitem name='Spaceships' id='top_level_menu_spaceship' parent='root_menu_spaceship' sequence='2' />
-    <menuitem name='Odoo Spaceship' id='menu_item_spaceship' parent='top_level_menu_spaceship' sequence='3' action='spaceship_list_action' />
+    <record model='ir.actions.act_window' id='mission_list_action'>
+      <field name='name'>Mission</field>
+      <field name='res_model'>odoo.mission</field>
+      <field name='view_mode'>tree,form</field>
+      <field name='help' type='html'>
+        <p class="o_view_nocontent_smiling_face">Create the first spaceship mission</p>
+      </field>
+    </record>
+
+    <menuitem name='Odoo Spaceships Missions' id='root_menu_spaceship' sequence='1' />
+    <menuitem name='Odoo Spaceships' id='top_level_menu_spaceship' parent='root_menu_spaceship' sequence='2' />
+    <menuitem name='Spaceship' id='menu_item_spaceship' parent='top_level_menu_spaceship' sequence='3' action='spaceship_list_action' />
+    <menuitem name='Missions' id='menu_item_mission' parent='top_level_menu_spaceship' sequence='4' action='mission_list_action' />
   </data>
 </odoo>

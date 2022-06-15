@@ -1,14 +1,15 @@
 # -*- Encoding: utf-8 -*-
 
 from odoo import models, fields, api
+from odoo.exceptions import UserError, ValidationError
 
 class SpaceShip(models.Model):
   _name = 'odoo.spaceship'
   _description = 'Spaceship info'
 
-  name = fields.Char(string='Ship\'s Nanme', required=True)
-  captain = fields.Char(string='Captain\'s name',required=True)
-  ship_dimensions = fields.Float( string='Ship\'s Dimensions',required=True)
+  name = fields.Char(string='Ship\'s Name', required=True)
+  ship_width = fields.Float( string='Ship\'s Width',required=True)
+  ship_height = fields.Float( string='Ship\'s Height',required=True)
   fuel_type = fields.Selection(
     string='Ship\'s Fuel Type',
     required=True,
@@ -29,3 +30,9 @@ class SpaceShip(models.Model):
   )
   number_passengers = fields.Integer(string='Number of Passengers',required=True)
   active = fields.Boolean(default=True)
+
+  @api.constrains('ship_width')
+  def _check_ship_width(self):
+    for record in self:
+      if record.ship_width > record.ship_height:
+        raise UserError('The width of the ship should not be larger than the height')

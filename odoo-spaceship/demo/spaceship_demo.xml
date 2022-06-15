@@ -3,29 +3,29 @@
   <data>
     <record model='odoo.spaceship' id='falcon_9'>
       <field name='name'>Falcon 9</field>
-      <field name='captain'>John Doe</field>
-      <field name='ship_dimensions'>70</field>
-      <field name='fuel_type'>solid</field>
+      <field name='ship_height'>70.0</field>
+      <field name='ship_width'>12.2</field>
+      <field name='fuel_type'>liquid</field>
       <field name='ship_type'>flipper</field>
-      <field name="number_passengers">50</field>
+      <field name="number_passengers">15</field>
       <field name='active'>True</field>
     </record>
     <record model='odoo.spaceship' id='starship_ns15'>
       <field name='name'>Starship NS15</field>
-      <field name='captain'>Ivan Ivanov</field>
-      <field name='ship_dimensions'>120</field>
+      <field name='ship_height'>120</field>
+      <field name='ship_width'>9.0</field>
       <field name='fuel_type'>liquid</field>
       <field name='ship_type'>knightship</field>
-      <field name='number_passengers'>70</field>
+      <field name='number_passengers'>10</field>
       <field name='active'>True</field>
     </record>
     <record model='odoo.spaceship' id='dragon'>
       <field name='name'>Dragon</field>
-      <field name='captain'>Ivan Ivanov</field>
-      <field name='ship_dimensions'>8.1</field>
+      <field name='ship_height'>8.1</field>
+      <field name='ship_width'>4.0</field>
       <field name='fuel_type'>solid</field>
       <field name='ship_type'>glide_symmetric_spaceship</field>
-      <field name='number_passengers'>8</field>
+      <field name='number_passengers'>7</field>
       <field name='active'>True</field>
     </record>
   </data>

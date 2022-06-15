@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+  <data>
+    <record model='ir.ui.view' id='mission_view_form'>
+      <field name='name'>odoo.mission.form</field>
+      <field name='model'>odoo.mission</field>
+      <field name='arch' type='xml'>
+        <form string='Add Mission'>
+          <sheet>
+            <grou>
+              <h2>Mission Name</h2>
+              <h1><field name='name'/></h1>
+            </grou>
+            <group>
+              <group>
+                <field name='launch_date' />
+              </group> 
+              <group>
+                <field name='comeback_date'/>
+              </group>
+              <group>
+                <field name='ship_id'/>
+              </group>
+              <notebook>
+                <page string='Tripulation'>
+                  <field name='tripulation_ids'/>
+                </page>
+              </notebook>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+    <record model='ir.ui.view' id='mission_view_list'>
+      <field name='name'>odoo.mission.list</field>
+      <field name='model'>odoo.mission</field>
+      <field name='arch' type='xml'>
+        <tree string='Mission List'>
+          <field name='launch_date'/>
+          <field name='comeback_date'/>
+        </tree>
+      </field>
+    </record>
+  </data>
+</odoo>
