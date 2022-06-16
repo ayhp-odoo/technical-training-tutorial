@@ -9,11 +9,12 @@
   'website': 'https://www.odoo.com',
   'category': 'Logistcs',
   'version': '0.1',
-  'depends': ['base'],
+  'depends': ['project'],
   'data': [
     'views/spaceship_menu_items.xml',
     'views/speceship_views.xml',
     'views/mission_views.xml',
+    'views/project_views_inherit.xml',
     'security/spaceship_security.xml',
     'security/ir.model.access.csv',
   ],

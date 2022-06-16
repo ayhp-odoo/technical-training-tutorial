@@ -14,32 +14,57 @@
             <group>
               <group>
                 <field name='launch_date' />
+                <field name='comeback_date'/>
               </group> 
               <group>
-                <field name='comeback_date'/>
-              </group>
-              <group>
                 <field name='ship_id'/>
+                <field name='amount_fuel'/>
+                <field name='engines'/>
               </group>
-              <notebook>
-                <page string='Tripulation'>
-                  <field name='tripulation_ids'/>
-                </page>
-              </notebook>
             </group>
+            <notebook>
+              <page string='Tripulation'>
+                <field name='tripulation_ids'/>
+              </page>
+            </notebook>
           </sheet>
         </form>
       </field>
     </record>
+
     <record model='ir.ui.view' id='mission_view_list'>
       <field name='name'>odoo.mission.list</field>
       <field name='model'>odoo.mission</field>
       <field name='arch' type='xml'>
         <tree string='Mission List'>
+          <field name='name'/>
           <field name='launch_date'/>
           <field name='comeback_date'/>
         </tree>
       </field>
     </record>
+    
+    <record model='ir.ui.view' id='mission_view_pivot'>
+      <field name='name'>odoo.mission.pivot</field>
+      <field name='model'>odoo.mission</field>
+      <field name='arch' type='xml'>
+        <pivot>
+          <field name='amount_fuel' type='measure'/>
+          <field name='engines' type='measure'/>
+        </pivot>
+      </field>
+    </record>
+    
+    <record model='ir.ui.view' id='mission_view_graph'>
+      <field name='name'>odoo.mission.graph</field>
+      <field name='model'>odoo.mission</field>
+      <field name='arch' type='xml'>
+        <graph string='Mission nessesary'>
+          <field name='amount_fuel' type='row'/>
+          <field name='engines' type='row'/>
+        </graph>
+      </field>
+    </record>
+  
   </data>
 </odoo>

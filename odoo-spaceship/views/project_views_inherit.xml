@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record model='ir.ui.view' id='view_project_kanban_inherit_mission'>
+      <field name='name'>project.kanban.inherit.mission</field>
+      <field name='model'>project.project</field>
+      <field name='inherit_id' ref='project.project_project_view_form_simplified'/>
+      <field name='arch' type='xml'>
+        <xpath expr='//field[@name="name"]' position='after'>
+          <field name='mission_id' />
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>
