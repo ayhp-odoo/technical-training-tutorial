@@ -26,6 +26,9 @@
               <page string='Tripulation'>
                 <field name='tripulation_ids'/>
               </page>
+              <page string='Projects'>
+                <field name='project_ids' />
+              </page>
             </notebook>
           </sheet>
         </form>

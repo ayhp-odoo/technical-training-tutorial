@@ -15,6 +15,7 @@
     'views/speceship_views.xml',
     'views/mission_views.xml',
     'views/project_views_inherit.xml',
+    'wizard/project_wizard_view.xml',
     'security/spaceship_security.xml',
     'security/ir.model.access.csv',
   ],
