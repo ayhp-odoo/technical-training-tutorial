@@ -28,6 +28,12 @@ class SpaceShip(models.Model):
       ('knightship','Knightship')
     ],
   )
+
+  missions_id = fields.One2many(
+    comodel_name='odoo.mission',
+    inverse_name='ship_id',
+    string='Mission'
+  )
   number_passengers = fields.Integer(string='Number of Passengers',required=True)
   active = fields.Boolean(default=True)
 

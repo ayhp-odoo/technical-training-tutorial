@@ -9,7 +9,7 @@
               <group>
                   <field name="name"/>
                   <field name="description"/>
-                  <field name="mission_id" invisible="0"/>
+                  <field name="mission_id" invisible="1"/>
               </group>
               <footer>
                   <button name="create_project_mission" type="object" string="Create" class="oe_highlight"></button>

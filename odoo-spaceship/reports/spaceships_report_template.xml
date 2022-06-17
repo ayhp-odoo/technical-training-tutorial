@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+  <record id='report_spaceship' model='ir.actions.report'>
+    <field name='name'>Spaceship Report</field>
+    <field name='model'>odoo.spaceship</field>
+    <field name='report_type'>qweb-html</field>
+    <field name='report_name'>odoo-spaceship.report_spaceship_document</field>
+    <field name='report_file'>odoo-spacesihp.report_spaceship</field>
+    <field name='print_report_name'>spaceship report</field>
+    <field name='binding_model_id' ref='odoo-spaceship.model_odoo_spaceship'/>
+    <field name='binding_type'>report</field>
+  </record>
+
+  <template id='report_spaceship_document'>
+    <t t-call='web.html_container'>
+      <t t-foreach='docs' t-as='doc'>
+        <t t-call='web.external_layout'>
+          <div class='page'>
+            <h2 t-field='doc.name' class='mt16' />
+            <div class='row mt32 mb32' id='spacehsip_info'>
+              <div class='col-auto mw-100 mb-2'>
+                <strong>Ship's Measures</strong>
+                <t t-if='doc.ship_width and doc.ship_height'>
+                  <p>Width: <span t-field='doc.ship_width' />meteres</p>
+                  <p>Height: <span t-field='doc.ship_height' />meteres</p>
+                </t>
+              </div>
+            </div>
+            <div class='row mt32 mb32' id='spacehsip_missions_info'>
+              <t t-foreach='doc.missions_id' t-as='mission'>
+                <strong>Ship's Missions</strong>
+                <div class='col-auto mw-100 mb-2'>
+                  <p>Mission name: <span t-field='mission.name'/></p>
+                  <p>Engines for mission: <span t-field='mission.engines'/></p>
+                  <p>Amount of fuel for mission: <span t-field='mission.amount_fuel'/></p>
+                </div>
+              </t>  
+            </div>
+          </div>
+        </t>
+      </t>
+    </t>
+  </template>
+</odoo>

@@ -18,6 +18,7 @@
     'wizard/project_wizard_view.xml',
     'security/spaceship_security.xml',
     'security/ir.model.access.csv',
+    'reports/spaceships_report_template.xml'
   ],
   'demo': [
     'demo/spaceship_demo.xml'

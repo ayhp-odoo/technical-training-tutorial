@@ -9,8 +9,12 @@ class ProjectWizard(models.TransientModel):
         return self.env['odoo.mission'].browse(self._context.get('active_id'))
         
     name = fields.Char(required=True)
-    description = fields.Char(required=True)
-    mission_id = fields.Many2one(comodel_name='odoo.mission', string='Mission',required = True,default= _default_mission)
+    description = fields.Text(required=True)
+    mission_id = fields.Many2one(comodel_name='odoo.mission',default= _default_mission)
 
     def create_project_mission(self):
-      pass
+        project_id = self.env['project.project'].create({
+            'name': self.name,
+            'description': self.description,
+            'mission_id': self.mission_id.id
+        })
