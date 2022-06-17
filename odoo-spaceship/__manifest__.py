@@ -9,7 +9,7 @@
   'website': 'https://www.odoo.com',
   'category': 'Logistcs',
   'version': '0.1',
-  'depends': ['project'],
+  'depends': ['project','website'],
   'data': [
     'views/spaceship_menu_items.xml',
     'views/speceship_views.xml',
@@ -18,7 +18,8 @@
     'wizard/project_wizard_view.xml',
     'security/spaceship_security.xml',
     'security/ir.model.access.csv',
-    'reports/spaceships_report_template.xml'
+    'reports/spaceships_report_template.xml',
+    'views/missions_web_template.xml'
   ],
   'demo': [
     'demo/spaceship_demo.xml'
